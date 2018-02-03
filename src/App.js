@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import SubmitInfo from './components/submit-info';
+import DrawingTable from './components/drawing-table';
+import SaveDraw from './components/save-draw';
+
 class App extends Component {
   render() {
     return (
@@ -12,30 +16,9 @@ class App extends Component {
         <main>
           <p>Draw the things you like by choosing the size of the board and the color of your pencil.</p>
           <div>
-            <div>
-              <label>Width:</label>
-              <input type="number" />
-              <label>Height:</label>
-              <input type="number" />
-              <button type="button">Submit board</button>
-            </div>
-            <div>
-              <table>
-                <tr>
-                  <td>dsadsada</td>
-                  <td>dsadsada</td>
-                  <td>dsadsada</td>
-                </tr>
-                <tr>
-                  <td>dsadsada</td>
-                  <td>dsadsada</td>
-                  <td>dsadsada</td>
-                </tr>
-              </table>
-            </div>
-            <div>
-              <button type="button">Save your drawing</button>
-            </div>
+            <SubmitInfo />
+            <DrawingTable />
+            <SaveDraw />
           </div>
         </main>
       </div>
