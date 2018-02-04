@@ -22,7 +22,17 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Drawing-table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Drawing-table > tbody > tr > td{
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  margin: 0px;
 }

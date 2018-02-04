@@ -21,7 +21,7 @@ class App extends Component {
             <SaveDraw />
           </div>
         </main>
-        <p>Made with &#128154; &nbsp; by <a href="http://instagram.com/aling.js">Alin Gheorghe</a></p>
+        <p>Made with <span role="img" aria-label="emoji green heart">&#128154;</span> by <a href="http://instagram.com/aling.js">Alin Gheorghe</a></p>
       </div>
     );
   }

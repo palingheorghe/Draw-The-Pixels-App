@@ -4,9 +4,9 @@ const SubmitInfo = (props) => {
     return (
         <div>
             <label>Width:</label>
-            <input type="number" />
+            <input type="number" placeholder="0"/>
             <label>Height:</label>
-            <input type="number" />
+            <input type="number" placeholder="0"/>
             <button type="button">Submit board</button>
         </div>
     );
