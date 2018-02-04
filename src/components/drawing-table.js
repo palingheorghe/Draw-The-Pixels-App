@@ -18,11 +18,7 @@ const DrawingTable = (props) => {
         <div>
             <table className="Drawing-table">
                 <tbody>
-                {
-                    array.map( (row) => {
-                        return (<tr>{ row.map((column) => { return (<td></td>) }) }</tr>)
-                        })
-                }
+                { array.map( row => <tr>{ row.map( column => <td></td> ) }</tr> ) }
                 </tbody>
             </table>
         </div>
