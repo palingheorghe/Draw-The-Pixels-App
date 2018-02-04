@@ -6,6 +6,31 @@ import DrawingTable from './components/drawing-table';
 import SaveDraw from './components/save-draw';
 
 class App extends Component {
+  
+  constructor(props){
+    super(props);
+
+    this.changeDraw = this.changeDraw.bind(this);
+    this.state = {
+      columns: 15,
+      rows: 2
+    };
+  }
+
+  changeDraw(x,y) {
+
+    if(x===0) {
+      this.setState({
+        rows: y
+      });
+    }else if(y===0) {
+      this.setState({
+        columns: x
+      });
+    }
+    
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,12 +41,12 @@ class App extends Component {
         <main>
           <p>Draw the things you like by choosing the size of the board and the color of your pencil.</p>
           <div>
-            <SubmitInfo />
-            <DrawingTable />
+            <SubmitInfo changingRows={this.changeDraw}/>
+            <DrawingTable columns={ this.state.columns } rows={ this.state.rows }/>
             <SaveDraw />
           </div>
         </main>
-        <p>Made with <span role="img" aria-label="emoji green heart">&#128154;</span> by <a href="http://instagram.com/aling.js">Alin Gheorghe</a></p>
+        <p>Made with <span role="img" aria-label="emoji green heart"> &#128154; </span> by <a href="http://instagram.com/aling.js">Alin Gheorghe</a></p>
       </div>
     );
   }

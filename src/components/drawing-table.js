@@ -1,15 +1,13 @@
 import React from 'react';
-
-const x = 30;
-const y = 30;
+import PropTypes from 'prop-types';
 
 const DrawingTable = (props) => {
 
     const array = [];
     
-    for(let i = 0; i < x; i++) {
+    for(let i = 0; i < props.rows; i++) {
         array.push([]);
-        for(let j=0; j < y; j++){
+        for(let j=0; j < props.columns; j++){
             array[i].push(j);
         }
     }
@@ -23,6 +21,11 @@ const DrawingTable = (props) => {
             </table>
         </div>
     );
+};
+
+DrawingTable.propTypes = {
+    rows: PropTypes.number.isRequired,
+    columns: PropTypes.number.isRequired
 };
 
 export default DrawingTable;
