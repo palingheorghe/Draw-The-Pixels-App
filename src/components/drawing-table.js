@@ -8,17 +8,8 @@ class DrawingTable extends Component {
     constructor(props) {
         super(props);
 
-        //this.elementClicked = this.elementClicked.bind(this);
         this.state = { color: '#929000'};
     }
-/*
-    elementClicked(element) {
-        this.setState({
-            elementClicked: element
-        });
-        console.log('clicked that ' + element);
-    }
-*/
     render(){
         const array = [];
     
@@ -33,7 +24,7 @@ class DrawingTable extends Component {
             <div>
                 <table className="Drawing-table">
                     <tbody>
-                    { array.map( row => <tr>{ row.map( column =>  <TableCell color={this.state.color}/>) }</tr> ) }
+                    { array.map( row => <tr>{ row.map( column =>  <TableCell color={this.props.color}/>) }</tr> ) }
                     </tbody>
                 </table>
             </div>
@@ -43,7 +34,8 @@ class DrawingTable extends Component {
 
 DrawingTable.propTypes = {
     rows: PropTypes.number.isRequired,
-    columns: PropTypes.number.isRequired
+    columns: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired
 };
 
 export default DrawingTable;

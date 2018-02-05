@@ -9,13 +9,14 @@ const SubmitInfo = (props) => {
             <label>Width:</label>
             <input type="number" placeholder="38" onChange={event => props.changingRows(~~event.target.value, 0)}/>
             <br />
-            <input type="color" onChange={event => console.log(event.target.value)}/>
+            <input type="color" onChange={event => props.changingColor(event.target.value)}/>
         </div>
-    );
+    ); 
 };
 
 SubmitInfo.propTypes = {
-    changingRows: PropTypes.func.isRequired
+    changingRows: PropTypes.func.isRequired, 
+    changingColor: PropTypes.func.isRequired
 };
 
 export default SubmitInfo;
