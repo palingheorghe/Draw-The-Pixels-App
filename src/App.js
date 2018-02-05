@@ -12,8 +12,8 @@ class App extends Component {
 
     this.changeDraw = this.changeDraw.bind(this);
     this.state = {
-      columns: 15,
-      rows: 2
+      columns: 38,
+      rows: 25
     };
   }
 
@@ -42,7 +42,6 @@ class App extends Component {
           <p>Draw the things you like by choosing the size of the board and the color of your pencil.</p>
           <div>
             <SubmitInfo changingRows={this.changeDraw}/>
-            <input type="color" />
             <DrawingTable columns={ this.state.columns } rows={ this.state.rows }/>
             <SaveDraw />
           </div>

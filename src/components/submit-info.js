@@ -5,9 +5,11 @@ const SubmitInfo = (props) => {
     return (
         <div>
             <label>Height:</label>
-            <input type="number" placeholder="2" onChange={event => props.changingRows(0, ~~event.target.value)}/>
+            <input type="number" placeholder="25" onChange={event => props.changingRows(0, ~~event.target.value)}/>
             <label>Width:</label>
-            <input type="number" placeholder="15" onChange={event => props.changingRows(~~event.target.value, 0)}/>
+            <input type="number" placeholder="38" onChange={event => props.changingRows(~~event.target.value, 0)}/>
+            <br />
+            <input type="color" onChange={event => console.log(event.target.value)}/>
         </div>
     );
 };
