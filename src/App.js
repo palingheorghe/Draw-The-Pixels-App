@@ -3,7 +3,6 @@ import './App.css';
 
 import SubmitInfo from './components/submit-info';
 import DrawingTable from './components/drawing-table';
-import SaveDraw from './components/save-draw';
 
 class App extends Component {
   
@@ -49,7 +48,6 @@ class App extends Component {
           <div>
             <SubmitInfo changingRows={this.changeDraw} changingColor={this.changeColor}/>
             <DrawingTable columns={ this.state.columns } rows={ this.state.rows } color={this.state.color}/>
-            <SaveDraw />
           </div>
         </main>
         <p>Made with <span role="img" aria-label="emoji green heart">&#128154; </span> by <a href="http://instagram.com/aling.js">Alin Gheorghe</a></p>

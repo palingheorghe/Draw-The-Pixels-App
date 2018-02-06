@@ -22,6 +22,14 @@
   font-size: large;
 }
 
+.Size-picker > label{
+  margin-left: 10px;
+}
+
+.Color-picker {
+  margin-top: 15px;
+}
+
 .Drawing-table {
   border-spacing: 0px;
   border-collapse: collapse;
